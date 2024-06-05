@@ -23,6 +23,7 @@ public class EventController {
     // Add an event
     @PostMapping
     public ResponseEntity<EventDto> createEvent(@Valid @RequestBody EventDto eventDto){
+        System.out.println("Hello");
         return new ResponseEntity<>(eventService.createEvent(eventDto), HttpStatus.CREATED);
     }
 
